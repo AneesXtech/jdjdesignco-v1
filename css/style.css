@@ -1393,24 +1393,114 @@ summary:focus-visible {
         grid-template-columns: 1fr
     }
 
+    /* Contact Section Mobile Overflow & Crop Fix */
+    .cs {
+        height: 280vh
+    }
+
+    .csk {
+        padding-top: 74px;
+        padding-bottom: 16px;
+        justify-content: flex-start;
+        height: 100svh;
+        overflow: hidden;
+        box-sizing: border-box
+    }
+
+    .cth {
+        margin-bottom: .6rem;
+        padding: 0 1rem
+    }
+
+    .cth .eb {
+        font-size: .8rem;
+        margin: 0 0 .2rem
+    }
+
+    .cth h2 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+        line-height: 1.1;
+        margin: 0
+    }
+
+    .cth p {
+        font-size: .82rem;
+        line-height: 1.35;
+        margin: .2rem 0 0
+    }
+
     .env {
-        aspect-ratio: .82
+        width: min(390px, 92vw);
+        aspect-ratio: auto;
+        height: min(440px, calc(100svh - 180px));
+        position: relative
     }
 
     .e2 {
-        flex-direction: column
+        inset: 0;
+        flex-direction: column;
+        gap: .5rem;
+        padding: .85rem 1rem;
+        overflow: hidden;
+        border-radius: 16px;
+        box-sizing: border-box
     }
 
     .ei {
-        flex: 0 0 34%
+        flex: 0 0 110px;
+        height: 110px;
+        border-radius: 10px;
+        overflow: hidden
+    }
+
+    .ei img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+
+    .et {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: .35rem;
+        min-height: 0
+    }
+
+    .et h3 {
+        font-size: 1.25rem;
+        line-height: 1.15;
+        margin: 0 0 .15rem
+    }
+
+    .et p {
+        font-size: .8rem;
+        line-height: 1.35;
+        margin: 0;
+        color: #3d4452
+    }
+
+    .et .btn {
+        padding: .6rem 1.2rem;
+        font-size: .88rem;
+        margin-top: .3rem;
+        align-self: flex-start
     }
 
     .e3 {
-        top: 30%
+        top: 26%;
+        padding: 1.2rem 1rem
     }
 
     .e3 h3 {
-        margin-bottom: 1.4rem
+        font-size: 1.6rem;
+        margin-bottom: .6rem
+    }
+
+    .e3 p {
+        font-size: .82rem;
+        line-height: 1.4
     }
 }
 
@@ -2584,5 +2674,51 @@ body.white-page .fl a {
         align-items: flex-start !important;
         gap: .5rem !important;
         font-size: .8rem !important;
+    }
+
+    /* Contact Envelope Mobile Phone Fit */
+    .csk {
+        padding-top: 70px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .cth {
+        margin-bottom: .4rem !important;
+    }
+
+    .cth h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .env {
+        width: 100% !important;
+        max-width: 360px !important;
+        height: min(420px, calc(100svh - 165px)) !important;
+    }
+
+    .e2 {
+        padding: .75rem .9rem !important;
+        gap: .4rem !important;
+    }
+
+    .ei {
+        flex: 0 0 95px !important;
+        height: 95px !important;
+    }
+
+    .et h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: .1rem !important;
+    }
+
+    .et p {
+        font-size: .75rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .et .btn {
+        padding: .5rem 1.1rem !important;
+        font-size: .84rem !important;
+        margin-top: .25rem !important;
     }
 }
