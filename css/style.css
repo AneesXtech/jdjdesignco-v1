@@ -3,7 +3,9 @@
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%
 }
 
 :root {
@@ -22,7 +24,9 @@ body {
     font: 400 1.0625rem/1.6 var(--a);
     background: var(--k);
     color: #fff;
-    overflow-x: hidden
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%
 }
 
 img {
@@ -2407,24 +2411,178 @@ body.white-page .fl a {
 
 @media(max-width:960px) {
     .w-contact-wrap {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding: 2.2rem 0 3.5rem;
     }
 }
 
 @media(max-width:600px) {
+    /* Prevent any element from exceeding viewport width */
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    .w {
+        width: calc(100% - 1.8rem);
+        margin-inline: auto;
+    }
+
+    /* Hero Banner Mobile Spacing & Typography */
+    .w-head {
+        padding: 96px 0 24px;
+    }
+
+    .w-head__badge {
+        white-space: normal;
+        text-align: left;
+        font-size: .68rem;
+        padding: .4rem .75rem;
+        border-radius: 10px;
+        line-height: 1.4;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        box-sizing: border-box;
+    }
+
+    .w-head h1 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        line-height: 1.15;
+        margin-bottom: .8rem;
+        word-break: break-word;
+    }
+
+    .w-head__sub {
+        font-size: .98rem;
+        line-height: 1.55;
+        margin-bottom: 1.4rem;
+    }
+
+    /* Timezone Bar: stack cleanly with no overflow */
+    .tz-bar {
+        flex-direction: column;
+        gap: .65rem;
+        padding-top: 1rem;
+        font-size: .82rem;
+    }
+
+    .tz-item {
+        gap: .5rem;
+    }
+
+    /* Form & Aside Cards */
+    .w-form-card {
+        padding: 1.4rem 1.1rem;
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+
+    .w-card {
+        padding: 1.4rem 1.1rem;
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+
     .w-grid-2 {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: .85rem;
     }
 
     .w-choices {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: .6rem;
+    }
+
+    .w-choice {
+        padding: .7rem .85rem;
+        font-size: .84rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .w-field input,
+    .w-field select,
+    .w-field textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: .9rem;
+        padding: .7rem .85rem;
+    }
+
+    .w-specs-grid {
+        grid-template-columns: 1fr;
+        gap: .55rem;
+    }
+
+    .w-spec-box {
+        padding: .65rem .85rem;
+    }
+
+    .w-spec-box .v {
+        word-break: break-word;
+        font-size: .88rem;
     }
 
     .w-callouts {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: .75rem;
     }
 
-    .w-head {
-        padding-top: 130px
+    .w-callout-item {
+        padding: .9rem 1rem;
+    }
+
+    .w-founder-row {
+        gap: .9rem;
+    }
+
+    .w-founder-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .w-founder-info .name {
+        font-size: 1.45rem;
+    }
+
+    /* Form Notice & Buttons */
+    .w-form-notice {
+        font-size: .78rem;
+        padding: .55rem .75rem;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .w-btn-send {
+        padding: .95rem 1.2rem;
+        font-size: .94rem;
+    }
+
+    .w-btn-stripe {
+        padding: .9rem 1.2rem;
+        font-size: .92rem;
+    }
+
+    /* Footer Mobile Responsiveness */
+    .fg {
+        grid-template-columns: 1fr !important;
+        gap: 1.6rem !important;
+    }
+
+    .fw {
+        font-size: 13vw !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        margin: 1.8rem 0 -.06em !important;
+    }
+
+    .fl .w {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: .5rem !important;
+        font-size: .8rem !important;
     }
 }
